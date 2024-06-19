@@ -1,11 +1,13 @@
 "use client"
 
+import { Suspense } from 'react';
 import Link from 'next/link' 
 import { products } from '@/data/Products';
 import ProductCard from '@/components/ProductCard';
 import { useSearchParams } from 'next/navigation';
+import Loading from '@/components/Loading';
 
-export default function Home() {
+ function Home() {
   const query = useSearchParams()
 
 
@@ -60,4 +62,12 @@ export default function Home() {
       </div>
     </main>
   );
+}
+
+export default function Homepage() {
+  return (
+    <Suspense fallback={<Loading />}>
+      <Home />
+    </Suspense>
+  )
 }
