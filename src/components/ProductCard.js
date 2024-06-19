@@ -33,7 +33,7 @@ const ProductCard = ({ image, name, price, stripeId }) => {
                     onClick={() => BuyItem(stripeId)}
                   >
                     {!loading ? (<><p>Buy Now</p><img className="w-8 h-8 mx-3" src="/cart.svg" alt="cart" /></>) : (
-                      <span className="mx-43 loading loading-spinner loading-lg"></span>
+                      <span className="mx-3 loading loading-spinner loading-lg"></span>
                       )}
                 </button>
             </div>
