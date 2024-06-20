@@ -47,9 +47,9 @@ import Loading from '@/components/Loading';
 
 
   return (
-    <main className="flex min-h-screen flex-col items-center gap-10 p-24">
-      <h1 className="text-6xl my-10 font-semibold">Buy shoes with Stripe!</h1>
-      <div className="flex flex-wrap gap-10">
+    <main className="flex min-h-screen flex-col items-center gap-10 p-6 sm:p-9 md:p-12 lg:p-24">
+      <h1 className="text-4xl text-center lg:text-6xl my-10 font-semibold">Buy shoes with Stripe!</h1>
+      <div className="flex flex-wrap gap-10 px-6">
         {products.map((product) => (
             <ProductCard
               key={product.id}
